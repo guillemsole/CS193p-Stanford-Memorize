@@ -12,19 +12,12 @@ struct MemoryGame<CardContent> {
     // What does this model do vars and functions in place
     var cards: Array<Card>
     
+    
     mutating func choose(card: Card) {
         print("Card chosen:  \(card)")
-        let chosenIndex: Int = index(of: card)
-        cards[chosenIndex].isFaceUp = !cards[chosenIndex].isFaceUp
-    }
-    
-    func index(of card: Card) -> Int {
-        for index in 0..<cards.count {
-            if cards[index].id == card.id {
-                return index
-            }
+        if let chosenIndex = cards.firstIndex(matching: card) {
+            cards[chosenIndex].isFaceUp = !cards[chosenIndex].isFaceUp
         }
-        return 0 // TODO: bogus!
     }
     
     init(numberOfPairsOfCards: Int, cardContentFactory: (Int) -> CardContent) {
