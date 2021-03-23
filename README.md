@@ -1,4 +1,4 @@
-# CS193p-Stanford-Memorize
+# CS193p Stanford Memorize App
 
 Stanford University's course CS193p (Developing Applications for iOS using SwiftUI) project, available at [https://cs193p.sites.stanford.edu/](https://cs193p.sites.stanford.edu/).
 
